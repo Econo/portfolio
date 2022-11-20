@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Reservation request</title>
+	<link rel="stylesheet" href="main.css">
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="reservation.js"></script>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 87.5%;
+    background-color: white;
+    margin: 0 auto;
+    width: 600px;
+    border: 3px solid blue;
+    padding: 10px 20px;
+}
+
+label {
+	float: left;
+    width: 100px;
+}
+input, select {
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: .5em;
+}
+input {
+    width: 14em;	
+}
+input.left {
+	width: 1em;
+	padding-left: 0;
+}
+fieldset {
+	border: none;
+	margin-left: 0;
+	margin-top: 1em;
+	padding: 0;
+}
+input.last {
+	margin-bottom: 1em;
+}
+
+#policies {
+	margin-left: 0;
+	width: 15em;
+}
+#submit {
+	width: 10em;
+}
+
+span {
+	color: red;
+}
+
+#loginform{
+  margin-left: 8vw;
+}
+
+h1{
+  margin-left: 8vw;
+}
+</style>
+<script>
+$( document ).ready(function() {
+  document.getElementById("emailh").style.display = "none";
+  document.getElementById("passh").style.display = "none";
+});
+
+  function validateForm() {
+  
+
+    if(document.getElementById("email").value=="admin@gcrypto.com")
+               {
+                document.getElementById("emailh").style.display = "none";
+               }else{
+                document.getElementById("emailh").style.display = "block";
+               }
+               if(document.getElementById("password").value=="P@ssw0rd")
+               {
+                document.getElementById("passh").style.display = "none";
+               }else{
+                document.getElementById("passh").style.display = "block";
+               }
+               if(document.getElementById("email").value=="admin@gcrypto.com" && document.getElementById("password").value=="P@ssw0rd" )
+               { 
+                document.getElementById("emailh").style.display = "none";
+                document.getElementById("passh").style.display = "none";
+               } else{
+                 return false;
+               }
+	}
+  </script>
+<body>
+	<h1>G-Crypto</h1>
+  <form name="myForm" action="FAQ.html" onsubmit="return validateForm()" class="form form-group">
+    		<label for="email">Email:</label>
+			<input type="text" name="email" id="email" class="form-control">
+			<span id="emailh" class="text-danger">Email is required</span><br>
+        	<label for="password">Password:</label>
+        	<input type="text" name="password" id="password" class="form-control">
+        	<span id="passh">Password is required/ Invalid Email or Password</span><br>
+      <p><strong>Email: admin@gcrypto.com </strong></p>
+      <p><strong>Password: P@ssw0rd </strong></p>
+    	<fieldset>
+      <button type="submit" id="submit" value="Login" class="btn btn-danger">Login</button>
+    	</fieldset>
+
+	</form>
+</body>
+</html>

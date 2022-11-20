@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+<style type="text/css">
+
+    .table {
+   margin: auto;
+   width: 25%;
+}
+
+li {
+	padding-right: 10px;
+	display: inline;
+}
+
+
+</style>
+
+<div class="container">
+<body >
+  <head class="m-0 m-md-2 m-1g-3 m-xl-5">
+  <h1 class="well font-weight-bold">A website for a gym</h1>
+  <i class='fas fa-drum' style='font-size:36px'></i>
+  </head>
+  <div class="d-flex flex-column flex-lg-row">
+    <p>Come today!</p>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navigation</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="about.html">About <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="BMI.html">BMI</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="FAQ.html">FAQ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="Home.html">Home</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-12">
+          <ul id="image_list">
+            <li><a href="images/g1.jpg" title="Before and After: Jeremy">
+              <img src="images/g1.jpg" alt=""  height="66" width="50"></a></li>
+            <li><a href="images/g2.jpg" title="Before and After: Lisa">
+              <img src="images/g2.jpg" alt=""  height="66" width="50"></a></li>
+            <li><a href="images/g3.jpg" title="Before and After: Adam">
+              <img src="images/g3.jpg" alt=""  height="66" width="50"></a></li>
+            <li><a href="images/g4.jpg" title="Before and After: Madison">
+              <img src="images/g4.jpg" alt=""  height="66" width="50"></a></li>
+            <li><a href="images/g5.jpg" title="Before and After: Ron" >
+              <img src="images/g5.jpg" alt=""  height="66" width="50"></a></li>
+        </ul>
+        <h2 id="caption">Before and After: Jeremy</h2>               
+        <p><img src="images/g1.jpg" alt="" id="image" height="300" width="460"></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function() {
+	// preload images
+$("#image_list a").each(function() {
+				var swappedImage = new Image();
+				swappedImage.src = $(this).attr("href");
+			});
+	
+	// set up event handlers for links    
+	
+
+
+
+	$("#image_list a").click(function(evt) {
+		evt.preventDefault();
+		$("h2").fadeOut(1000);
+		$("p").fadeOut(1000, function(){
+			
+			
+			// set up event handlers for links    
+			$("#image_list a").click(function(evt) {
+				evt.preventDefault();
+				var imageURL = $(this).attr("href");
+				$("#image").attr("src", imageURL);
+						
+				var caption = $(this).attr("title");
+				$("#caption").text(caption);
+				
+				$("p").fadeIn(1000);
+				$("h2").fadeIn(1000);
+				// cancel the default action of the link
+
+			}); // end click
+			
+    });
+	});
+
+
+	// move focus to first thumbnail
+	$("li:first-child a").focus();
+}); // end ready
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</div>

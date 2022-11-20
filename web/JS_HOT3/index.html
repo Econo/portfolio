@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script>
+    function validatew()
+        {
+           var checkIf = document.getElementById("inlineCheckbox1");
+           var checkIft = document.getElementById("inlineCheckbox2");
+           var textIf = document.getElementById("check");
+           var x = document.getElementById("radio1").checked;
+  var y = document.getElementById("radio2").checked;
+  if (x == true || y == true){
+  		document.getElementById("rad").style.display = "none";
+      document.getElementById("tex").style.display = "none";
+  	}else{
+    	document.getElementById("rad").style.display = "block";
+      document.getElementById("tex").style.display = "block";
+    }
+         if(document.getElementById("one").value=="")
+               {
+                document.getElementById("text").style.display = "block";
+                document.getElementById("tex").style.display = "block";
+               }else{
+                document.getElementById("text").style.display = "none";
+                document.getElementById("tex").style.display = "none";
+               }
+               if(document.getElementById("two").value=="")
+               {
+                document.getElementById("text").style.display = "block";
+                document.getElementById("tex").style.display = "block";
+               }else{
+                document.getElementById("text").style.display = "none";
+                document.getElementById("tex").style.display = "none";
+               }
+               if(document.getElementById("three").value=="")
+               {
+                document.getElementById("text").style.display = "block";
+                document.getElementById("tex").style.display = "block";
+               }else{
+                document.getElementById("text").style.display = "none";
+                document.getElementById("tex").style.display = "none";
+               }
+               if(document.getElementById("four").value=="")
+               {
+                document.getElementById("text").style.display = "block";
+                document.getElementById("tex").style.display = "block";
+               }else{
+                document.getElementById("text").style.display = "none";
+                document.getElementById("tex").style.display = "none";
+               }
+               if(document.getElementById("five").value=="")
+               {
+                document.getElementById("text").style.display = "block";
+                document.getElementById("tex").style.display = "block";
+               }else{
+                document.getElementById("text").style.display = "none";
+                document.getElementById("tex").style.display = "none";
+               }
+               if(document.getElementById("six").value=="")
+               {
+                document.getElementById("text").style.display = "block";
+                document.getElementById("tex").style.display = "block";
+               }else{
+                document.getElementById("text").style.display = "none";
+                document.getElementById("tex").style.display = "none";
+               }
+               if(document.getElementById("seven").value=="")
+               {
+                document.getElementById("text").style.display = "block";
+                document.getElementById("tex").style.display = "block";
+               }else{
+                document.getElementById("text").style.display = "none";
+                document.getElementById("tex").style.display = "none";
+               }
+               if(document.getElementById("eight").value=="")
+               {
+                document.getElementById("texty").style.display = "block";
+                document.getElementById("tex").style.display = "block";
+               }else{
+                document.getElementById("texty").style.display = "none";
+                document.getElementById("tex").style.display = "none";
+               }
+               if(document.getElementById("nine").value=="")
+               {
+                document.getElementById("texty").style.display = "block";
+                document.getElementById("tex").style.display = "block";
+               }else{
+                document.getElementById("texty").style.display = "none";
+                document.getElementById("tex").style.display = "none";
+               }
+               if(document.getElementById("ten").value=="")
+               {
+                document.getElementById("texty").style.display = "block";
+                document.getElementById("tex").style.display = "block";
+               }else{
+                document.getElementById("texty").style.display = "none";
+                document.getElementById("tex").style.display = "none";
+               }
+               if(document.getElementById("eleven").value=="")
+               {
+                document.getElementById("texty").style.display = "block";
+                document.getElementById("tex").style.display = "block";
+               }else{
+                document.getElementById("texty").style.display = "none";
+                document.getElementById("tex").style.display = "none";
+               }
+               if(document.getElementById("twelve").value=="")
+               {
+                document.getElementById("texty").style.display = "block";
+                document.getElementById("tex").style.display = "block";
+               }else{
+                document.getElementById("texty").style.display = "none";
+                document.getElementById("tex").style.display = "none";
+               }
+               if (checkIf.checked == true || checkIft.checked == true){
+    textIf.style.display = "none";
+    document.getElementById("tex").style.display = "none";
+  } else {
+     textIf.style.display = "block";
+     document.getElementById("tex").style.display = "block";
+  }
+	}
+        
+        
+
+  function myFunction() {
+  var checkBox = document.getElementById("sameCheck");
+  var text = document.getElementById("same");
+  if (checkBox.checked == true){
+    text.style.display = "none";
+  } else {
+     text.style.display = "block";
+  }
+}
+
+  
+
+  </script>
+</head>
+<style>
+  body{
+    margin: 3%;
+  }
+
+  input[type=text], select {
+  width: 30%;
+  margin: 8px 0;
+  display: block;
+  box-sizing: border-box;
+}
+
+header{
+  text-align: center;
+  background-color: red;
+}
+header h1{
+  color: black;
+}
+header h2{
+  color: white;
+}
+
+
+
+</style>
+<body>
+  <header>
+    <h1>G-Crypto</h1>
+    <h2>A Crypto Consultant that YOU CAN TRUST!</h2>
+  </header>
+  <p id="tex" class="text-danger" style="display:none">Please fix the indicated problems and the resubmit your order.</p>
+  <form action="cryptoSale.php" class="form">
+    <fieldset id="fir">
+      <legend><h6>What would you like today? *</h6></legend>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="Options" id="radio1" value="1">
+        <label class="form-check-label" for="inlineRadio1">Bitcoin</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="Options" id="radio2" value="2">
+        <label class="form-check-label" for="inlineRadio2">Ethereum</label>
+      </div>
+
+      <p id="rad" class="text-danger"style="display:none">Please select either Bitcoin or Ethereum</p>
+      
+    </fieldset>
+    <fieldset class="form-group">
+      <legend><h6>Which wallet(s) do you want to use? *</h6></legend>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" name="options[]" type="checkbox" id="inlineCheckbox1" value="option1">
+        <label class="form-check-label" for="inlineCheckbox1">Hardware Wallet</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" name="options[]" type="checkbox" id="inlineCheckbox2" value="option2">
+        <label class="form-check-label" for="inlineCheckbox2">Web Wallet</label>
+      </div>
+
+      <p id="check" class="text-danger" style="display:none">Please select Hardware or Web wallet</p>
+    </fieldset>
+    <fieldset class="form-group" id="myForm">
+      <legend><h3>Customer Information</h3></legend>
+      <label for="lname">First Name *</label>
+  <input class="form-control" type="text" id="one" name="lastname" >
+  <label for="lname">Last Name *</label>
+  <input class="form-control" type="text" id="two" name="lastname" >
+  <label for="lname">Street Address *</label>
+  <input class="form-control" type="text" id="three" name="lastname" >
+  <label for="lname">Zip Code *</label>
+  <input class="form-control" type="text" id="four" name="lastname" >
+  <label for="lname">Email *</label>
+  <input class="form-control" type="text" id="five" name="lastname" >
+  <label for="lname">Confirm Email *</label>
+  <input class="form-control" type="text" id="six" name="lastname" >
+  <label for="lname">Phone *</label>
+  <input class="form-control" type="text" id="seven" name="lastname" > 
+
+  <p id="text" class="text-danger"style="display:none">Please complete all Customer information</p>
+    </fieldset>
+    <fieldset name="myFormt"class="form-group" id="close">
+      <legend><h3>Billing Information</h3></legend>
+        <input type="checkbox" class="form-check-input" onclick="myFunction()" value="" id="sameCheck"> Same as above <br><br>
+  <div id="same">
+      <label for="lname">First Name *</label>
+  <input class="form-control" type="text" id="eight" name="lastname" >
+  <label for="lname">Last Name *</label>
+  <input class="form-control" type="text" id="nine" name="lastname" >
+  <label for="lname">Street Address *</label>
+  <input class="form-control" type="text" id="ten" name="lastname" >
+  <label for="lname">Zip Code *</label>
+  <input class="form-control" type="text" id="eleven" name="lastname" >
+  <label for="lname">Phone *</label>
+  <input class="form-control" type="text" id="twelve" name="lastname" >
+
+  <p id="texty" class="text-danger"style="display:none">Please complete all billing information.</p>
+    </div>
+    </fieldset>
+    
+    <input type="button" value="submit"  onclick="validatew()" />`
+
+  </form>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

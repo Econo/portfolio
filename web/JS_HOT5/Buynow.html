@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<script>
+$( document ).ready(function() {
+  document.getElementById("quant").style.display = "none";
+  document.getElementById("change").style.display = "none";
+});
+
+
+function validateForm() {
+if (isNaN(document.getElementById("myText").value) || document.getElementById("myText").value=="") {
+  document.getElementById("quant").style.display = "block";
+  }else{
+    document.getElementById("quant").style.display = "none";
+  }
+  if(document.getElementById("currency").value=="please")
+  {
+    document.getElementById("change").style.display = "block";
+  }else{
+    document.getElementById("change").style.display = "none";
+  }
+  if (isNaN(document.getElementById("myText").value) || document.getElementById("myText").value=="" || document.getElementById("currency").value=="please" )
+  { 
+    modal.style.display = "none";
+  }else{
+    let x = document.getElementById("myText").value;
+    let y = document.getElementById("currency").value;
+
+    document.getElementById("mdds").innerHTML = x +" "+ y +" Purchased!";
+    modal.style.display = "block";
+  }
+}
+</script>
+<style type="text/css">
+
+    .table {
+   margin: auto;
+   width: 25%;
+}
+nav{
+  background-color: red;
+}
+a{
+  color: white;
+}
+.navbar-toggler-icon{
+  background-color: white;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+
+</style>
+
+<div class="container">
+<body >
+  <head class="m-0 m-md-2 m-1g-3 m-xl-5">
+  <h1 class="well font-weight-bold">G-Crypto</h1>
+  </head>
+  <nav class="navbar navbar-expand-lg ">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="FAQ.html">FAQ <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Buynow.html">Buy Now</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <form class="form form-group">
+      <br><br><br>
+    <label for="currency">Currency</label> <br>
+  <select name="currency" id="currency" class="form-control">
+    <option value="please">Please select a Crypto</option>
+    <option value="Dogecoin">Dogecoin</option>
+  </select>
+   <span id="change" class="text-danger">Currency is required</span>
+  <br><br><br>
+  <label for="myText">Quantity</label><br>
+<input type="text" id="myText" value="" class="form-control">
+<span id="quant" class="text-danger">Quantity is required</span>
+    <fieldset>
+      <br>
+      <button type="button" id="submit" value="BuyNow" onclick="validateForm()" class="btn btn-danger">Buy Now</button>
+    	</fieldset>
+  </form>
+
+<!-- The Modal -->
+<section id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Success!!!</h2>
+    </div>
+    <div class="modal-body">
+      <p id="mdds"></p>
+    </div>
+    <div class="modal-footer">
+    </div>
+    <button type="button" class="btn btn-danger" onclick="myFunction()">celebrate!</button>
+  </div>
+
+</section>
+
+<script>
+let modal = document.getElementById("myModal");
+
+let btn = document.getElementById("myBtn");
+
+let span = document.getElementsByClassName("close")[0];
+
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+function myFunction(){
+  $( ".modal" ).toggle( "bounce", { times: 3 }, "slow" );
+}
+</script>
+ 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</div>
